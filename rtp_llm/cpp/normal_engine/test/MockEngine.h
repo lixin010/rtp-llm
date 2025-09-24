@@ -37,6 +37,7 @@ createEngineInitParams(DeviceBase* device, const CustomConfig& config, GptInitPa
     params.head_num_kv_                  = 2;
     params.block_nums_                   = 100;
     params.reuse_cache_                  = config.reuse_cache;
+    params.reuse_query_cache_            = config.reuse_query_cache;
     params.multi_task_prompt_tokens_     = config.multi_task_prompt_tokens;
     params.max_generate_batch_size_      = 128;
     params.max_context_batch_size_       = 128;
