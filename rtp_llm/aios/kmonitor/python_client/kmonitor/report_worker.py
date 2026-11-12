@@ -29,10 +29,7 @@ def _env_enabled(name: str) -> bool:
 
 def _defer_transport_for_scr() -> bool:
     enabled = _env_enabled("RTPLLM_ENABLE_SCR")
-    return enabled and os.environ.get("SCR_PHASE", "").strip().lower() in {
-        "checkpoint",
-        "restore",
-    }
+    return enabled and os.environ.get("SCR_PHASE", "").strip().lower() == "restore"
 
 
 class ReportWorker(object):
